@@ -3,6 +3,8 @@
   --bg_p1: red;
   --bg_p2: lightgrey;
   --bg_scissors: lightgreen;
+
+  font-family: "Roboto", sans-serif;
 }
 
 .rotate {
