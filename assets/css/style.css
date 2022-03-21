@@ -5,6 +5,10 @@
   --bg_scissors: lightgreen;
 }
 
+.rotate {
+  animation: rotate-center 0.4s ease-in-out both;
+}
+
 /*==============GENERAL===============*/
 .section {
   display: flex;
@@ -66,4 +70,21 @@
   color: orange;
   height: 30px;
   padding: 5px;
+}
+
+@-webkit-keyframes rotate-center {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate-center {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
