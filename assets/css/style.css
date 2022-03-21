@@ -51,6 +51,11 @@
 
 /*==============SECTION CHOICE===============*/
 
+.choice_child:hover {
+  cursor: pointer;
+  box-shadow: 7px 5px 5px black;
+  transform: scale(0.9);
+}
 /*==============SECTION SCORES===============*/
 
 .section.scores {

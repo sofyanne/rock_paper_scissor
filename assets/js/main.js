@@ -5,9 +5,7 @@ const dataGame = ["ROCK", "PAPER", "SCISSORS"];
 const qSElt = (nameElt) => document.querySelector(`${nameElt}`);
 const choice_p1 = qSElt(".battle_child.player-1");
 const choice_p2 = qSElt(".battle_child.player-2");
-const rock_button = qSElt(".choice_child.rock");
-const paper_button = qSElt(".choice_child.paper");
-const scissors_button = qSElt(".choice_child.scissors");
+const sectionChoice = qSElt("section.choice");
 const scores_player1 = qSElt(".player-1_scores");
 const scores_player2 = qSElt(".player-2_scores");
 const reset_button = qSElt(".manage_game-reset");
@@ -58,22 +56,13 @@ const setPoints = () => {
 };
 
 const app = () => {
-  //Tester event delegation.
-
-  rock_button.addEventListener("click", (e) => {
-    setChoice(e.target.innerText, choice_p1);
-    setRandomChoice(choice_p2);
-    setPoints();
-  });
-  paper_button.addEventListener("click", (e) => {
-    setChoice(e.target.innerText, choice_p1);
-    setRandomChoice(choice_p2);
-    setPoints();
-  });
-  scissors_button.addEventListener("click", (e) => {
-    setChoice(e.target.innerText, choice_p1);
-    setRandomChoice(choice_p2);
-    setPoints();
+  sectionChoice.addEventListener("click", (e) => {
+    let event = e.target.closest("div");
+    if (event) {
+      setChoice(event.innerText, choice_p1);
+      setRandomChoice(choice_p2);
+      setPoints();
+    }
   });
 
   reset_button.addEventListener("click", (e) => {
