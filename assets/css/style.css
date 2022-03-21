@@ -38,11 +38,16 @@
   width: 100px;
 }
 
+.battle_child.player-1,
+.battle_child.player-2 {
+  display: none;
+}
+
 /*==============SECTION CHOICE===============*/
 
 /*==============SECTION SCORES===============*/
 
-.section + .scores {
+.section.scores {
   line-height: 50px;
 }
 
@@ -52,7 +57,7 @@
 }
 
 /*==============SECTION MANAGE GAME===============*/
-.section + .manage_game {
+.section.manage_game {
   line-height: 24px;
 }
 
