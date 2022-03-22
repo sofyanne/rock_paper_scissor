@@ -1,14 +1,27 @@
 * {
   box-sizing: border-box;
-  --bg_p1: red;
-  --bg_p2: lightgrey;
-  --bg_scissors: lightgreen;
-
   font-family: "Roboto", sans-serif;
+
+  --bg_p1: rgba(255, 0, 183, 0.831);
+  --bg_p2: rgb(109, 74, 238);
+  --bg_scissors: rgb(58, 127, 232);
+
+  --br: 20px;
+  color: white;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+body {
+  background-color: black;
+}
+
+h1 {
+  text-align: center;
 }
 
 .rotate {
-  animation: rotate-center 0.4s ease-in-out both;
+  animation: rotate-center 0.4s ease-in-out both, reveal-text 0.9s;
 }
 
 /*==============GENERAL===============*/
@@ -17,9 +30,11 @@
   height: 200px;
   width: 500px;
   justify-content: space-around;
+  align-items: center;
   margin: auto;
   text-align: center;
   line-height: 100px;
+  border: 1px solid aqua;
 }
 
 .paper,
@@ -42,6 +57,7 @@
 .choice_child {
   height: 100px;
   width: 100px;
+  border-radius: var(--br);
 }
 
 .battle_child.player-1,
@@ -59,39 +75,47 @@
 /*==============SECTION SCORES===============*/
 
 .section.scores {
+  height: 100px;
   line-height: 50px;
 }
 
 .scores_child {
+  border-radius: var(--br);
   height: 50px;
   width: 100px;
 }
 
 /*==============SECTION MANAGE GAME===============*/
 .section.manage_game {
-  line-height: 24px;
+  line-height: 30px;
+  height: 50px;
 }
 
 .manage_game-reset {
   border: 1px solid orange;
+  border-radius: 10px;
+  cursor: pointer;
   color: orange;
   height: 30px;
-  padding: 5px;
 }
 
-@-webkit-keyframes rotate-center {
-  0% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
 @keyframes rotate-center {
   0% {
     transform: rotate(0);
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes reveal-text {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 50%;
+  }
+  100% {
+    opacity: 100%;
   }
 }
